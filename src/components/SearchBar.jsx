@@ -42,10 +42,6 @@ const SearchBar = () => {
           </button>
         </div>
       </form>
-
-      {/* <div className="mt-2 text-center">
-        <span className="text-xs text-gray-500">Try BIB numbers: 1234 or 5678 results</span>
-      </div> */}
     </div>
   );
 };

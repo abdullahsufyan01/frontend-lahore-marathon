@@ -1,6 +1,6 @@
 import React from 'react';
 import { Timer } from 'lucide-react';
-import LahoreMarathonBanner from '../assets/images/LahoreMarathonBanner.jpg'
+import LahoreMarathonBanner from '../assets/images/LahoreMarathonBannerComp.jpg'
 
 const Header = () => {
   return (
