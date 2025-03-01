@@ -7,7 +7,6 @@ import NoResults from './components/NoResults';
 import Header from './components/Header';
 import TopWinners from './components/TopWinners';
 import { useSelector } from "react-redux";
-import { topWinners } from './data/topWinners';
 import LahoreMarathonBanner from "./assets/images/LahoreMarathonBanner.jpg"
 
 function App() {
@@ -59,9 +58,7 @@ function App() {
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
             <span className="border-b-4 border-[#60712f] pb-2">Race Champions</span>
           </h2>
-          <TopWinners data={topWinners} category="runners_5km" />
-          <TopWinners data={topWinners} category="half_marathon" />
-          <TopWinners data={topWinners} category="full_marathon" />
+          <TopWinners/>
         </div>
       </main>
 

@@ -90,12 +90,12 @@ const ResultCard = ({ result }) => {
       {/* Bottom Decorative Element */}
       <div className="px-8 py-4 bg-gray-50 border-t border-gray-100">
         <div className="flex justify-between items-center">
-          <span className="text-xs text-gray-500">Lahore Marathon 2025</span>
-          <div className="flex space-x-2">
+          <span className="text-xs text-gray-500">One Degree Lahore Marathon 2025</span>
+          {/* <div className="flex space-x-2">
             <div className="w-2 h-2 bg-[#414833] rounded-full"></div>
             <div className="w-2 h-2 bg-[#656d4a] rounded-full"></div>
             <div className="w-2 h-2 bg-[#a4ac86] rounded-full"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
