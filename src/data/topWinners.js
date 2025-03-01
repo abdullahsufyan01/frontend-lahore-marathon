@@ -2,7 +2,7 @@ export const topWinners = {
  
 
     full_marathon: {
-        heading: "Full Marathon Winners",
+        heading: "Full Marathon",
         male: [
             {
                 "_id": "01",
@@ -67,7 +67,7 @@ export const topWinners = {
         ]
     },
     half_marathon: {
-        heading: "Half Marathon Winners",
+        heading: "Half Marathon",
         male: [
             {
                 "_id": "01",
@@ -134,7 +134,7 @@ export const topWinners = {
         ]
     },
     runners_5km: {
-        heading: "5km Winners",
+        heading: "5 KM",
         male: [
             {
                 "_id": "01",

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Trophy, Medal, Crown, Clock, User, Award } from 'lucide-react';
-import { topWinners } from '../data/topWinners'; 
+import { topWinners } from '../data/topWinners';
 
 const TopWinners = () => {
   const [activeRace, setActiveRace] = useState('full_marathon'); // Default race category
@@ -37,13 +37,13 @@ const TopWinners = () => {
       <div className="p-6">
         <div className="flex items-center mb-4">
           <div className="flex-shrink-0 mr-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#cfc9b6] to-emerald-50 flex items-center justify-center border-2 border-[#414833]">
-              <User className="h-8 w-8 text-[#414833]" />
+            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-white to-green-50 flex items-center justify-center border-2 border-green-500">
+              <User className="h-8 w-8 text-green-600" />
             </div>
           </div>
           <h3 className="text-lg font-bold text-gray-800">{winner.name}</h3>
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-3">
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div className="bg-gradient-to-br from-white to-green-50 p-3 rounded-lg border border-green-100">
             <p className="text-xs text-gray-500 mb-1">Position</p>
             <div className="flex items-center">
@@ -56,16 +56,16 @@ const TopWinners = () => {
           <div className="bg-gradient-to-br from-white to-green-50 p-3 rounded-lg border border-green-100">
             <p className="text-xs text-gray-500 mb-1">BIB</p>
             <div className="flex items-center">
-              <div className="p-1.5 rounded-full bg-gradient-to-br from-[#A4AC86] to-[#414833] mr-2">
+              <div className="p-1.5 rounded-full bg-gradient-to-br from-yellow-300 via-rose-400 to-purple-400 mr-2">
                 <Award className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-800">{winner.bibNo}</span>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-white to-green-50 p-3 rounded-lg border border-green-100 col-span-2">
+          <div className="col-span-2 bg-gradient-to-br from-white to-green-50 p-3 rounded-lg border border-green-100 col-span-1">
             <p className="text-xs text-gray-500 mb-1">Finish Time</p>
             <div className="flex items-center">
-              <div className="p-1.5 rounded-full bg-gradient-to-br from-[#A4AC86] to-[#414833] mr-2">
+              <div className="p-1.5 rounded-full bg-gradient-to-br from-yellow-300 via-rose-400 to-purple-400 mr-2">
                 <Clock className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-800">{winner.runDuration}</span>
@@ -73,16 +73,17 @@ const TopWinners = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 
   return (
-    <div className="mb-12 bg-white p-8 rounded-2xl shadow-lg">
+    <div className="bg-white p-8 rounded-2xl shadow-lg">
       <div className="flex mb-6 space-x-2">
         {Object.keys(topWinners).map((race) => (
           <button
             key={race}
-            className={`py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 ${activeRace === race ? 'bg-green-500 text-white' : 'text-green-700 hover:bg-green-100'}`}
+            className={`py-2 cursor-pointer px-4 rounded-lg text-sm font-medium transition-all duration-300 ${activeRace === race ? 'bg-green-500 text-white' : 'text-green-700 bg-green-100'}`}
             onClick={() => setActiveRace(race)}
           >
             {topWinners[race].heading}
@@ -90,26 +91,26 @@ const TopWinners = () => {
         ))}
       </div>
       <div className="flex items-center mb-6">
-        <div className="p-3 bg-gradient-to-br from-[#A4AC86] to-[#414833] rounded-full mr-4 shadow-md">
+        <div className="p-3 bg-gradient-to-br from-yellow-300 via-rose-400 to-purple-400 rounded-full mr-4 shadow-md">
           <Trophy className="w-6 h-6 text-white" />
         </div>
         <h2 className="text-2xl font-bold text-gray-800">{heading}</h2>
       </div>
       <div className="flex mb-8 bg-green-50 p-1 rounded-lg">
         <button
-          className={`py-3 px-6 flex-1 ${activeTab === 'male' ? 'bg-green-500 text-white' : 'text-green-700 hover:bg-green-100'}`}
+          className={`py-3 cursor-pointer px-6 flex-1 ${activeTab === 'male' ? 'bg-green-500 text-white' : 'text-green-700 hover:bg-green-100'}`}
           onClick={() => setActiveTab('male')}
         >
           Male Winners
         </button>
         <button
-          className={`py-3 px-6 flex-1 ${activeTab === 'female' ? 'bg-green-500 text-white' : 'text-green-700 hover:bg-green-100'}`}
+          className={`py-3 cursor-pointer px-6 flex-1 ${activeTab === 'female' ? 'bg-green-500 text-white' : 'text-green-700 hover:bg-green-100'}`}
           onClick={() => setActiveTab('female')}
         >
           Female Winners
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {activeTab === 'male' ? male.map(renderWinnerCard) : females.map(renderWinnerCard)}
       </div>
     </div>

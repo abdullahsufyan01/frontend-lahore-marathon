@@ -62,7 +62,7 @@ function App() {
         </div>
       </main>
 
-      <footer className="bg-white py-6 mt-12">
+      <footer className="bg-white py-6">
         <div className="container mx-auto px-4 text-center text-gray-500">
           <p>© One Degree Lahore Marathon 2025 Results Tracker. All rights reserved.</p>
         </div>
