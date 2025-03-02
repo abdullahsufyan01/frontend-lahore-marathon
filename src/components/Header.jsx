@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <header
     >
-       <img className='w-full h-auto' src={LahoreMarathonBanner} alt="" srcset="" />
+      <a className='w-full h-auto' href="https://lahore-marathon.com/">
+        <img className='w-full h-auto' src={LahoreMarathonBanner} alt="" srcset="" />
+      </a>
     </header>
   );
 };
