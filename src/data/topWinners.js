@@ -1,5 +1,5 @@
 export const topWinners = {
- 
+
 
     full_marathon: {
         heading: "Full Marathon",
@@ -148,9 +148,9 @@ export const topWinners = {
             },
             {
                 "_id": "02",
-                "name": "Muhammad Arfan",
-                "bibNo": "0000",
-                "runDuration": "0:21:17",
+                "name": "Muhamma Irfan",
+                "bibNo": "5550",
+                "runDuration": "0:15:22",
                 "raceStatus": "Completed",
                 "positionNum": "2",
                 "raceType": "5K",
@@ -159,8 +159,8 @@ export const topWinners = {
             {
                 "_id": "03",
                 "name": "Abdul Wahab",
-                "bibNo": "0000",
-                "runDuration": "0:21:17",
+                "bibNo": "5555",
+                "runDuration": "0:15:25",
                 "raceStatus": "Completed",
                 "positionNum": "3",
                 "raceType": "5K",
@@ -181,8 +181,8 @@ export const topWinners = {
             {
                 "_id": "02",
                 "name": "Mahnoor Afzal",
-                "bibNo": "0000",
-                "runDuration": "0:21:17",
+                "bibNo": "5377",
+                "runDuration": "0:21:37",
                 "raceStatus": "Completed",
                 "positionNum": "2",
                 "raceType": "5K",
@@ -190,9 +190,9 @@ export const topWinners = {
             },
             {
                 "_id": "02",
-                "name": "Kashaf Shafeq",
-                "bibNo": "0000",
-                "runDuration": "0:21:17",
+                "name": "Kashaf Sadique",
+                "bibNo": "5558",
+                "runDuration": "0:22:47",
                 "raceStatus": "Completed",
                 "positionNum": "3",
                 "raceType": "5K",
