@@ -44,7 +44,7 @@ const ResultCard = ({ result }) => {
                 <User className="h-5 w-5 text-green-500" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-gray-800">{result.name}</h2>
+                <h2 className="text-2xl font-bold text-gray-800">{result.name} ({result.gender ==="FEMALE"? "F":"M"})</h2>
                 {result.category && (
                   <p className="text-sm text-gray-500">{result.category}</p>
                 )}
@@ -61,7 +61,7 @@ const ResultCard = ({ result }) => {
                 <Award className="h-6 w-6 text-green-500" />
               </div>
               <div>
-                <span className="text-sm text-gray-500 block">Position</span>
+                <span className="text-sm text-gray-500 block">Overall Position</span>
                 <span className="font-bold text-xl text-gray-800">{result.positionNum || 'N/A'}</span>
               </div>
             </div>
@@ -73,6 +73,16 @@ const ResultCard = ({ result }) => {
               <div>
                 <span className="text-sm text-gray-500 block">Duration</span>
                 <span className="font-bold text-xl text-gray-800">{result.runDuration || 'N/A'}</span>
+              </div>
+            </div>
+
+            <div className="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-green-600 transition-colors duration-300">
+              <div className="bg-green-100 p-3 rounded-full mr-4">
+                <Clock className="h-6 w-6 text-green-500" />
+              </div>
+              <div>
+                <span className="text-sm text-gray-500 block">Gender-Specific Rank</span>
+                <span className="font-bold text-xl text-gray-800">{result.rankInSimilarGender || 'N/A'}</span>
               </div>
             </div>
           </div>
