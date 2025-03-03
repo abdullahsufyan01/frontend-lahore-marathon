@@ -24,10 +24,10 @@ const ResultCard = ({ result }) => {
       <div className="bg-gradient-to-r from-green-700 via-green-500 to-green-600 h-3"></div>
 
       <div className="md:flex">
-        <div className="md:shrink-0 bg-gradient-to-br from-green-700 via-green-600 to-green-500 flex items-center justify-center p-6 md:p-8">
+        <div className="md:shrink-0 bg-gradient-to-br from-green-700 via-green-600 to-green-500 flex items-center justify-center p-2 md:p-8">
           <div className="text-center">
-            <div className="text-white text-5xl font-bold">{result.bibNo}</div>
-            <div className="text-green-100 mt-2 font-medium tracking-wider text-sm">BIB NUMBER</div>
+            <div className="text-white text-3xl md:text-5xl font-bold">{result.bibNo}</div>
+            <div className="text-green-100 mt-2 font-medium tracking-wider md:not-last:text-sm text-xs">BIB NUMBER</div>
 
             {result.raceStatus === 'Completed' && (
               <div className="mt-4 bg-white/20 p-3 rounded-full inline-block">
@@ -44,7 +44,7 @@ const ResultCard = ({ result }) => {
                 <User className="h-5 w-5 text-green-500" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-gray-800">{result.name} ({result.gender === "FEMALE" ? "F" : "M"})</h2>
+                <h2 className="md:text-2xl text-lg font-bold text-gray-800">{result.name} ({result.gender === "FEMALE" ? "F" : "M"})</h2>
                 {result.category && (
                   <p className="text-sm text-gray-500">{result.category}</p>
                 )}
@@ -56,33 +56,33 @@ const ResultCard = ({ result }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-          <div className="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-green-600 transition-colors duration-300">
+          <div className="flex items-center p-1 md:p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-green-600 transition-colors duration-300">
               <div className="bg-green-100 p-3 rounded-full mr-4">
-                <Award className="h-6 w-6 text-green-500" />
+                <Award className="h-4 w-4 md:h-6 md:w-6 text-green-500" />
               </div>
               <div>
                 <span className="text-sm text-gray-500 block">{result.gender === "FEMALE" ? "Women's Rank" : "Men's Rank"}</span>
-                <span className="font-bold text-xl text-gray-800">{result.rankInSimilarGender || 'N/A'}</span>
+                <span className="font-bold text-sm md:text-xl text-gray-800">{result.rankInSimilarGender || 'N/A'}</span>
               </div>
             </div>
 
-            <div className="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-green-600 transition-colors duration-300">
+            <div className="flex items-center p-1 md:p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-green-600 transition-colors duration-300">
               <div className="bg-green-100 p-3 rounded-full mr-4">
-                <Clock className="h-6 w-6 text-green-500" />
+                <Clock className="h-4 w-4 md:h-6 md:w-6 text-green-500" />
               </div>
               <div>
                 <span className="text-sm text-gray-500 block">Duration</span>
-                <span className="font-bold text-xl text-gray-800">{result.runDuration || 'N/A'}</span>
+                <span className="font-bold text-sm md:text-xl text-gray-800">{result.runDuration || 'N/A'}</span>
               </div>
             </div>
 
-            <div className="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-green-600 transition-colors duration-300">
+            <div className="flex items-center p-1 md:p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-green-600 transition-colors duration-300">
               <div className="bg-green-100 p-3 rounded-full mr-4">
-                <Award className="h-6 w-6 text-green-500" />
+                <Award className="h-4 w-4 md:h-6 md:w-6 text-green-500" />
               </div>
               <div>
                 <span className="text-sm text-gray-500 block">Overall Position</span>
-                <span className="font-bold text-xl text-gray-800">{result.positionNum || 'N/A'}</span>
+                <span className="font-bold text-sm md:text-xl text-gray-800">{result.positionNum || 'N/A'}</span>
               </div>
             </div>
           </div>
